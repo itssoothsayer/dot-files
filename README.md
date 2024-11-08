@@ -2,7 +2,7 @@
 
 ## To Apply Themes
 - First install gnome-tweaks and then install user themes extension.
-- If you cant  find the perfect whole theme, find the gnome shell theme and then you can find the gtk theme
+- If you cant  find the perfect whole theme, find the gnome shell theme and then you can find the gtk theme.
 - The perfect catppuccin theme is a combo of that. 
 - To apply theme copy the theme files in the ~/.theme directory. Also in the theme directory open gtk-4.0 directory and copy the asset directory and paste into ~/.config directory. Then again from the theme directory in the gtk-4.0 directory copy the gtk.css and gtk-dark.css files and paste them into ~/.config/gtk-4.0/
 - You are all set for the theme. To check whether it has been applied or not close the gtk apps (for nautilus to close open terminal and type nautilus -q) and reopen them to see the change.
