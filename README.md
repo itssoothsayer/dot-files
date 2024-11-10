@@ -1,4 +1,4 @@
-# my-gnome-files
+# My Files
 
 ## To Apply Themes
 - First install gnome-tweaks and then install user themes extension.
