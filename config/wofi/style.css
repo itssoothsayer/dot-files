@@ -1,0 +1,98 @@
+/*
+* wofi style. Colors are from Catppuccin Mocha Dark palette
+* Author: catppuccin (https://github.com/catppuccin)
+*
+*/
+@define-color base00 #1e1e2e;
+@define-color base01 #2e2e3e;
+@define-color base02 #3e3e5f;
+@define-color base03 #5e5e5e;
+@define-color base04 #b8b8d3;
+@define-color base05 #e0e0e8;
+@define-color base06 #d9d7e1;
+@define-color base07 #f5e0dc;
+@define-color base08 #f38ba8;
+@define-color base09 #f9e2af;
+@define-color base0A #a6e3a1;
+@define-color base0B #94e2d5;
+@define-color base0C #89b4fa;
+@define-color base0D #f5c2e7;
+@define-color base0E #c6a0f6;
+@define-color base0F #e8a2af;
+
+window {
+    opacity: 0.9;
+    border: 0px;
+    border-radius: 10px;
+    font-family: "Fira Code", monospace;
+    font-size: 18px;
+}
+
+#input {
+    border-radius: 10px 10px 0px 0px;
+    border: 0px;
+    padding: 10px;
+    margin: 0px;
+    font-size: 28px;
+    color: @base0A;
+    background-color: @base01;
+}
+
+#inner-box {
+    margin: 0px;
+    color: @base06;
+    background-color: @base00;
+}
+
+#outer-box {
+    margin: 0px;
+    background-color: @base00;
+    border-radius: 10px;
+}
+
+#selected {
+    background-color: @base09;
+}
+
+#entry {
+    padding: 0px;
+    margin: 0px;
+    background-color: @base00;
+}
+
+#scroll {
+    margin: 5px;
+    background-color: @base00;
+}
+
+#text {
+    margin: 0px;
+    padding: 2px 2px 2px 10px;
+}
+
+/* Styling for icon */
+listitem img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Scrollbar styling */
+wofi::-webkit-scrollbar {
+    width: 10px;
+}
+
+wofi::-webkit-scrollbar-thumb {
+    background: @base03;
+    border-radius: 5px;
+}
+
+wofi::-webkit-scrollbar-track {
+    background: @base00;
+}
+
+/* Scrollbar hover */
+wofi::-webkit-scrollbar-thumb:hover {
+    background: @base0D;
+}
+
