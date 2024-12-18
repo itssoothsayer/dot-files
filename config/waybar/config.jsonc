@@ -101,19 +101,17 @@
     },
 
     "network": {
-	"interval": 1,
-	"format": "{ifname}",
-	"format-wifi": "󰜷 {bandwidthDownBytes}",
-	//"format-ethernet": "󰜮 {bandwidthDownBytes} 󰜷 {bandwidthUpBytes}",
-	"format-ethernet": "󰜮 {bandwidthDownBytes}",
-	//"format-disconnected": "󰌙",
-	"tooltip-format": "{ipaddr}",
-	"tooltip-format-wifi": "{essid} {icon} {signalStrength}% | {ipaddr}",
-	"tooltip-format-ethernet": "{ipaddr} 󰌘 | 󰜮 {bandwidthDownBytes} 󰜷 {bandwidthUpBytes}",
-	"tooltip-format-disconnected": "󰌙 Disconnected",
-	"max-length": 30,
-	"format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
-     },
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSpeed: <b> {bandwidthDownBytes}  {bandwidthUpBytes}</b>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": "󰖪",
+        "tooltip-format-disconnected": "Disconnected",
+        "format": "<span foreground='#f4d9e1'> {bandwidthDownBytes}</span>",
+        "format-alt": "<span foreground='#f4d9e1'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>"
+    },
+     
+     
      
     "privacy": {
         "icon-spacing": 14,
