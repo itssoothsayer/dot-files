@@ -119,6 +119,19 @@ window#waybar {
     color: #f4d9e1;
 }
 
+#power-profiles-daemon.performance {
+    color: #e64553; /* Red color for performance */
+}
+
+#power-profiles-daemon.balanced {
+    color: #f9e2af; /* Yellow color for balanced profile */
+}
+
+/* Power-saver icon - green */
+#power-profiles-daemon.power-saver {
+    color: #a6da95; /* Green color for power-saver */
+}
+
 /* General Module Styling */
 #custom-swaync {
   padding: 0 5px;
@@ -127,4 +140,5 @@ window#waybar {
   color: #f4d9e1; /* Adjust to your theme */
   font-weight: bold;
 }
+
 
