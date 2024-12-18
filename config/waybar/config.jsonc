@@ -7,8 +7,8 @@
     "margin-left": 0,
     "margin-right": 0,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["network#speed", "tray", "pulseaudio", "backlight", "battery", "power-profiles-daemon", "custom/swaync"],
+    "modules-center": ["clock", "privacy"],
+    "modules-right": ["network", "tray", "pulseaudio", "backlight", "battery", "power-profiles-daemon", "custom/swaync"],
 
     "hyprland/workspaces": {
         "disable-scroll": false,
@@ -100,18 +100,37 @@
         "escape": true
     },
 
-    "network#speed": {
+    "network": {
 	"interval": 1,
 	"format": "{ifname}",
-	"format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
-	"format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
-	"format-disconnected": "󰌙",
+	"format-wifi": "󰜷 {bandwidthDownBytes}",
+	//"format-ethernet": "󰜮 {bandwidthDownBytes} 󰜷 {bandwidthUpBytes}",
+	"format-ethernet": "󰜮 {bandwidthDownBytes}",
+	//"format-disconnected": "󰌙",
 	"tooltip-format": "{ipaddr}",
 	"tooltip-format-wifi": "{essid} {icon} {signalStrength}% | {ipaddr}",
-	"tooltip-format-ethernet": "{ipaddr} 󰌘",
+	"tooltip-format-ethernet": "{ipaddr} 󰌘 | 󰜮 {bandwidthDownBytes} 󰜷 {bandwidthUpBytes}",
 	"tooltip-format-disconnected": "󰌙 Disconnected",
 	"max-length": 30,
 	"format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+     },
+     
+    "privacy": {
+        "icon-spacing": 14,
+        "icon-size": 12,
+        "transition-duration": 250,
+        "modules": [
+         { 
+           "type": "screenshare",
+           "tooltip": true,
+           "tooltip-icon-size": 24
+         },
+         {
+           "type": "audio-in",
+           "tooltip": true,
+           "tooltip-icon-size": 24
+         }
+        ]
      }
     
     //playerctl should be installed

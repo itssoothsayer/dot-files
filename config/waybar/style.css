@@ -71,6 +71,7 @@ window#waybar {
 #tray {
     border-radius: 16px;
     margin-right: 0px;
+    margin-left: -5px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
     color: #f4d9e1; /* Align color with other elements */
@@ -120,7 +121,7 @@ window#waybar {
 }
 
 #power-profiles-daemon.performance {
-    color: #e64553; /* Red color for performance */
+    color: #ed8796; /* Red color for performance */
 }
 
 #power-profiles-daemon.balanced {
@@ -141,4 +142,17 @@ window#waybar {
   font-weight: bold;
 }
 
+#network {
+    font-size: 15px; /* Default font size for the module */
+    padding: 0px 10px 0px 10px; /* Optional padding for better alignment */
+    border-radius: 4px; /* Optional border-radius for a rounded look */
+    font-weight: bold; /* Adjust font weight if needed */
+}
+
+#privacy {
+    font-size: 14px;              /* Default font size for the module */
+    padding: 0px 10px 0px 10px;   /* Optional padding for better alignment */
+    border-radius: 8px;           /* Optional border-radius for a rounded look */
+    font-weight: bold;            /* Adjust font weight if needed */
+}
 
