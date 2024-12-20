@@ -1,0 +1,5 @@
+Mission Center	io.missioncenter.MissionCenter	0.6.2	stable	system
+Jellyfin Server	org.jellyfin.JellyfinServer	10.10.3	stable	system
+qBittorrent	org.qbittorrent.qBittorrent	5.0.3	stable	system
+SABnzbd	org.sabnzbd.sabnzbd	4.3.3	stable	system
+VLC	org.videolan.VLC	3.0.21	stable	system
