@@ -1,0 +1,75 @@
+Goal: Automatically lock the screen when the system suspends or resumes using Hyprlock and Hypridle in Hyprland.
+
+1. Ensuring Hyprlock Locks Screen on Suspend
+
+    Hyprlock is a screen locking tool that can lock your screen when triggered.
+    Hypridle can handle idle time to trigger Hyprlock after a set period of inactivity.
+
+What We Did:
+
+    We discussed ensuring that Hyprlock locks the screen when the system goes to sleep (suspend).
+    This is handled either manually (by running hyprlock) or automatically through a systemd service.
+
+2. Locking Screen on Suspend with Systemd
+
+    Systemd services were set up to run Hyprlock automatically before the system suspends and after it resumes.
+
+Steps to Lock on Suspend:
+
+    Create a systemd service to lock the screen before suspend:
+        This ensures that Hyprlock locks the screen before the system enters suspend mode.
+	
+	[Unit]
+	Description=Lock screen before suspend
+	Before=sleep.target
+		
+	[Service]
+	Type=oneshot
+	ExecStart=/usr/bin/hyprlock
+	User=<your-username>
+
+	[Install]
+	WantedBy=sleep.target
+	
+Save this as /etc/systemd/system/hyprlock-suspend.service.
+
+Enable the service to ensure it runs on suspend: sudo systemctl enable hyprlock-suspend.service
+
+
+3. Locking Screen on Resume (Optional)
+
+    After suspending, it might be useful to lock the screen again immediately upon resuming from suspend.
+    Locking on resume ensures that after the system wakes up, your screen is immediately locked, enhancing security.
+
+Steps to Lock on Resume:
+
+    Create a systemd service to lock the screen after resume:
+        This runs Hyprlock as soon as the system wakes up from suspend.
+
+
+	[Unit]
+	Description=Lock screen after resume
+	After=suspend.target
+
+	[Service]
+	Type=oneshot
+	ExecStart=/usr/bin/hyprlock
+	User=<your-username>
+	Environment=DISPLAY=:0  # Only for X11; omit if on Wayland (Hyprland)
+
+	[Install]
+	WantedBy=multi-user.target
+
+    Save this as /etc/systemd/system/hyprlock-resume.service.
+
+Enable the service to ensure it runs after resume: sudo systemctl enable hyprlock-resume.service
+This will ensure Hyprlock runs immediately after resume and locks your screen.
+
+Final Check: Test and Confirm
+
+    Test the lock on suspend:
+        Suspend the system: systemctl suspend.
+        Check if Hyprlock locks the screen as expected before the system goes into suspend.
+
+    Test the lock on resume:
+        Resume from suspend: Check if Hyprlock locks the screen immediately after waking up.

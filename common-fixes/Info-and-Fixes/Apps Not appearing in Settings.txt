@@ -1,0 +1,2 @@
+(This is the dependency which is missing when in gnome the apps are not showing in the the Settings -> Apps section)
+sudo pacman -S malcontent

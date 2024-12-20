@@ -1,0 +1,29 @@
+29 Oct 2024
+- Made Changes to Firewall so that can connect to GSconnect
+	sudo firewall-cmd --permanent --add-port=1714-1764/udp
+	sudo firewall-cmd --reload
+	
+04 Nov 2024
+-Made some changes in themes
+	-First install user themes extensions from the extension store.
+	-Dracula theme (https://draculatheme.com/)
+	-Tela Icons
+	-extracted the dracula theme folder and copied asset folder here -> /home/soothsayer/.config/assets
+	-copied gtk.css and gtk-dark.css -> /home/soothsayer/.config/gtk-4.0
+	
+
+14 Nov 2024
+made sudo passwordless
+sudo visudo
+visudo: /etc/sudoers.tmp 
+	at the end of the file made change:
+	soothsayer ALL=(ALL) NOPASSWD: ALL
+
+sudo systemctl disable mysqld
+	- Disable mysql service to start automatically on boot
+	- To start MySQL manually when needed: sudo systemctl start mysqld
+	- To stop MySQL when you’re done: sudo systemctl stop mysqld
+	- To check the current status: sudo systemctl status mysqld
+
+	
+

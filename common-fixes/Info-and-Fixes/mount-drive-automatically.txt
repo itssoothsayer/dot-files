@@ -1,0 +1,34 @@
+❯ lsblk -l
+NAME      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1   259:0    0   1.8T  0 disk 
+nvme0n1p1 259:1    0    16M  0 part 
+nvme0n1p2 259:2    0   1.8T  0 part 
+nvme1n1   259:3    0 476.9G  0 disk 
+nvme1n1p1 259:4    0     1G  0 part /boot/efi
+nvme1n1p2 259:5    0 475.9G  0 part /
+
+
+So this is our drives and we want to mount nvme0n1p2 to lets say /mnt
+
+# Write the command to identify the UUID of the drive
+sudo blkid /dev/nvme0n1p2
+
+# The output will look something like this: /dev/nvme0n1p2: UUID="xxxx-xxxx" TYPE="ext4" PARTUUID="xxxx-xxxx"
+/dev/nvme0n1p2: LABEL="BackUp" BLOCK_SIZE="512" UUID="5C8C96638C96378A" TYPE="ntfs" PARTLABEL="Basic data partition" PARTUUID="e206f6af-31d5-406a-a1b7-413f5f4eec6e"
+
+# So the UUID of the partition is 5C8C96638C96378A
+
+# Now, we'll edit the /etc/fstab file to mount your partition (nvme0n1p2) on /mnt at boot time.
+sudo nano /etc/fstab
+UUID=5C8C96638C96378A   /mnt   ntfs   defaults   0 0 #paste it at the end
+
+# If the /mnt directory doesn't already exist, create it:
+sudo mkdir -p /mnt
+
+# Mount the Partition
+sudo mount -a
+
+
+
+
+

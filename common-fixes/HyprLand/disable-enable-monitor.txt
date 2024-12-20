@@ -1,0 +1,5 @@
+hyprctl keyword monitor eDP-1,disable
+
+hyprctl keyword monitor eDP-1,enable
+
+# this can be used the enable or disable monitors

@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Name=WebStorm
+Comment=WebStorm IDE
+Exec=/usr/local/bin/webstorm
+Icon=/opt/WebStorm-2024.2.4/WebStorm-242.23726.96/bin/webstorm.png
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+StartupWMClass=jetbrains-webstorm
+
+
+# The desktop file should be in /usr/share/applications
+# and should have permissions to run it as an executible, below is an example
+# sudo chmod +x /usr/share/applications/webstorm.desktop
+

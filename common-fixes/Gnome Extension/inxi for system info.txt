@@ -1,0 +1,4 @@
+inxi is a powerful command-line tool for system information, including temperatures.
+
+View Temperature Data: Run the following command to view temperature data:
+inxi -s

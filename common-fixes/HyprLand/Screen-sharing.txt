@@ -1,0 +1,7 @@
+#For screen sharing to work in hyprland xdg-desktop-portal-hyprland should be installed.
+#https://wiki.hyprland.org/Hypr-Ecosystem/xdg-desktop-portal-hyprland/
+
+sudo pacman -S xdg-desktop-portal-hyprland
+
+#And to start the service
+systemctl --user start xdg-desktop-portal-hyprland 

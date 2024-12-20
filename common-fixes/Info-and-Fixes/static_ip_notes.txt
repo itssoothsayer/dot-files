@@ -1,0 +1,49 @@
+First run the command:
+❯ nmcli device status
+DEVICE         TYPE      STATE                   CONNECTION         
+enp2s0         ethernet  connected               Wired connection 1 
+lo             loopback  connected (externally)  lo                 
+wlan0          wifi      unavailable             --                 
+p2p-dev-wlan0  wifi-p2p  unavailable             --    
+
+now from above we get the name of the connection -> Wired connection 1
+To know the default gateway run:
+
+❯ ip route
+default via 192.168.1.1 dev enp2s0 proto static metric 100 
+192.168.1.0/24 dev enp2s0 proto kernel scope link src 192.168.1.20 metric 100 
+
+Commands to Set Static IP on Network Connection:
+
+1. Set Static IP Address:
+   sudo nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.20/24
+   - Purpose: Configures the static IPv4 address for the connection.
+   - Details:
+     - 192.168.1.20: The static IP address you want to assign.
+     - /24: Subnet mask (255.255.255.0), which allows for 254 hosts in the network.
+
+2. Set Default Gateway:
+   sudo nmcli con mod "Wired connection 1" ipv4.gateway 192.168.1.1
+   - Purpose: Specifies the default gateway IP address.
+   - Details: 192.168.1.1 is commonly the IP address of your router or gateway that connects your local network to the internet.
+
+3. Set DNS Servers:
+   sudo nmcli con mod "Wired connection 1" ipv4.dns "8.8.8.8 8.8.4.4"
+   - Purpose: Specifies the DNS servers for resolving domain names.
+   - Details:
+     - 8.8.8.8 and 8.8.4.4: Google's public DNS servers. You can replace them with others like Cloudflare (1.1.1.1) or OpenDNS (208.67.222.222).
+
+4. Switch to Static IP Configuration:
+   sudo nmcli con mod "Wired connection 1" ipv4.method manual
+   - Purpose: Switches the connection method to manual static IP configuration.
+   - Details: By default, ipv4.method is set to auto, which uses DHCP. Setting it to manual ensures that the IP configuration is static rather than dynamic.
+
+Key Points:
+- Static IP: You’ve set the device to use 192.168.1.20/24 as the static IP.
+- Gateway: You set the gateway to 192.168.1.1.
+- DNS: Google's DNS servers (8.8.8.8 and 8.8.4.4) are used for domain name resolution.
+- Configuration Method: The connection method is set to manual (static), overriding any DHCP settings.
+
+Next Step:
+- Apply the changes by restarting the connection:
+   sudo nmcli con down "Wired connection 1" && sudo nmcli con up "Wired connection 1"

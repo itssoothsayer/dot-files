@@ -1,0 +1,12 @@
+#First copy your gtk-3.0 and gtk-4.0 files to /usr/share/themes /usr/share/icons and to ~/.themes ~/.icons
+
+#To make the icons theme (mouse cursor) behave consistently
+#make a default directory if not there then do the following
+
+nano index.theme
+[Icon Theme]
+Inherits=Bibata-Modern-Ice
+
+#save and exit
+#now you can change the theme from nwg-look
+

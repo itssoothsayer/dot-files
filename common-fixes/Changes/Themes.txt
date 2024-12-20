@@ -1,0 +1,14 @@
+Terminal Theme
+	- Catppuccin Theme
+	
+Shell Theme
+	WM - Dracula Theme
+	Icons - Tela-circle-dracula
+	Font - Inter (11pt)
+	Cursor: Bibata-Modern-Ice
+	Terminal Font: JetBrainsMono Nerd Font Mon)
+	
+Bash
+	- Zoxide
+	- fzf
+	- Starship

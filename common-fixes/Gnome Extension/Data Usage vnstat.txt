@@ -1,0 +1,8 @@
+Monthly Data Usage:
+vnstat -i wlo1 -m
+
+Daily Data Usage:
+vnstat -i wlo1 -d
+
+Hourly Data Usage (if you need more granularity):
+vnstat -i wlo1 -h
