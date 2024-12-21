@@ -10,7 +10,15 @@ sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #This should add the other os entries into the grub at the EFI partition. You can check by running the command:
-sudo efibootmgr #This will show all the entries in the grub menu.
+sudo efibootmgr #This will show all the entries in the grub menu. In case it doesn't detects other OS open:
+sudo nano /etc/default/grub 
+
+## At the end of the file you will see #GRUB_DISABLE_OS_PROBER=false 
+## if you dont see no problem add this and uncomment it
+GRUB_DISABLE_OS_PROBER=false
+
+#Now rerun the command this should work now 
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #Then check whether the grub is your dedault bootloader or not
 #Example
