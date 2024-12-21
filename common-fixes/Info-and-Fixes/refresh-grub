@@ -1,0 +1,45 @@
+#Steps After intalling a different OS(windows alongside with Linux)
+
+#Step1
+sudo pacman -S grub efibootmgr os-prober
+
+#Step2
+sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck --no-floppy
+
+#Step3
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+#This should add the other os entries into the grub at the EFI partition. You can check by running the command:
+sudo efibootmgr #This will show all the entries in the grub menu.
+
+#Then check whether the grub is your dedault bootloader or not
+#Example
+❯ sudo efibootmgr
+BootCurrent: 0005
+Timeout: 0 seconds
+BootOrder: 0000,0003,2001,2002,2003
+Boot0000* GRUB	HD(1,GPT,56b91d6e-3d16-4813-9d00-ae41d3df1aaa,0x1000,0x200000)/\EFI\GRUB\grubx64.efi
+Boot0002* EFI PXE 0 for IPv4 (E4-A8-DF-E2-CB-8A) 	PciRoot(0x0)/Pci(0x1,0x2)/Pci(0x0,0x0)/MAC(e4a8dfe2cb8a,0)/IPv4(0.0.0.0,0,DHCP,0.0.0.0,0.0.0.0,0.0.0.0)RC
+Boot0003* Windows Boot Manager	HD(1,GPT,56b91d6e-3d16-4813-9d00-ae41d3df1aaa,0x1000,0x200000)/\EFI\Microsoft\Boot\bootmgfw.efi57494e444f5753000100000088000000780000004200430044004f0042004a004500430054003d007b00390064006500610038003600320063002d0035006300640064002d0034006500370030002d0061006300630031002d006600330032006200330034003400640034003700390035007d00000061000100000010000000040000007fff0400
+Boot0004* EFI PXE 0 for IPv6 (E4-A8-DF-E2-CB-8A) 	PciRoot(0x0)/Pci(0x1,0x2)/Pci(0x0,0x0)/MAC(e4a8dfe2cb8a,0)/IPv6([::],0,Static,[::],[::],64)RC
+Boot2001* EFI USB Device	RC
+Boot2002* EFI DVD/CDROM	RC
+Boot2003* EFI Network	RC
+
+#Here’s what’s happening:
+
+    Boot0000: GRUB is listed, but it's not the default option right now.
+    Boot0003: Windows Boot Manager is listed as the default (BootOrder: 0000,0003,2001,2002,2003).
+    Boot2001, Boot2002, Boot2003: These are other boot options, like USB devices and PXE boot, which can be ignored for now.
+
+#Set GRUB as the Default Bootloader
+sudo efibootmgr -o 0000,0003,2001,2002,2003
+
+#Verify the change
+sudo efibootmgr
+
+
+
+
+
+
