@@ -1,165 +1,173 @@
 * {
-    border: none;
-    border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 15px;
-    font-style: normal;
-    min-height: 0;
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
+  font-style: normal;
+  min-height: 0;
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 1);
-    border-bottom: 0px solid #282828;
-    color: #f4d9e1;
+  background: rgba(30, 30, 46, 1);
+  border-bottom: 0px solid #282828;
+  color: #f4d9e1;
 }
 
 #workspaces {
-    margin: 5px 5px 5px 5px;
-    padding: 0px 5px 0px 5px;
-    border-radius: 16px;
-    border: solid 0px #f4d9e1;
-    font-weight: bold;
-    font-style: normal;
+  margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 16px;
+  border: solid 0px #f4d9e1;
+  font-weight: bold;
+  font-style: normal;
 }
 
 #workspaces button {
-    padding: 0px 5px;
-    border-radius: 16px;
-    color: #686868;
-    font-weight: bolder; /* Increased boldness */
-    font-size: 16px; /* Increase font size for better visibility */
+  padding: 0px 5px;
+  border-radius: 16px;
+  color: #686868;
+  font-weight: bolder; /* Increased boldness */
+  font-size: 16px; /* Increase font size for better visibility */
 }
 
 #workspaces button.active {
-    color: #f4d9e1;
-    background-color: transparent;
-    border-radius: 16px;
-    font-weight: bolder;
+  color: #f4d9e1;
+  background-color: transparent;
+  border-radius: 16px;
+  font-weight: bolder;
 }
 
 #workspaces button:hover {
-    background-color: #E6B9C6;
-    color: black;
-    border-radius: 16px;
+  background-color: #e6b9c6;
+  color: black;
+  border-radius: 16px;
 }
 
 @keyframes blinkText {
-    0% {
-        color: #f4d9e1;  /* Normal color (light) */
-        font-size: 14px;  /* Normal font size */
-    }
-    50% {
-        color: #ff0037;  /* Urgent color (red) */
-        font-size: 18px;  /* Larger font size when blinking */
-    }
-    100% {
-        color: #f4d9e1;  /* Back to normal color (light) */
-        font-size: 14px;  /* Back to normal font size */
-    }
+  0% {
+    color: #f4d9e1; /* Normal color (light) */
+    font-size: 14px; /* Normal font size */
+  }
+  50% {
+    color: #ff0037; /* Urgent color (red) */
+    font-size: 18px; /* Larger font size when blinking */
+  }
+  100% {
+    color: #f4d9e1; /* Back to normal color (light) */
+    font-size: 14px; /* Back to normal font size */
+  }
 }
 
 #workspaces button.urgent {
-    background-color: transparent;  /* Transparent background */
-    color: #f4d9e1;                 /* Normal color for text */
-    font-size: 14px;      /* Normal font size (override global if needed) */
-    border-radius: 9px;
-    padding: 0px 5px;               /* Padding for spacing */
-    animation: blinkText 1s infinite; /* Blinking text color and font size animation */
-    transition: font-size 0.2s ease-in-out; /* Smooth transition for font size */
+  background-color: transparent; /* Transparent background */
+  color: #f4d9e1; /* Normal color for text */
+  font-size: 14px; /* Normal font size (override global if needed) */
+  border-radius: 9px;
+  padding: 0px 5px; /* Padding for spacing */
+  animation: blinkText 1s infinite; /* Blinking text color and font size animation */
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for font size */
 }
 
 #tray {
-    border-radius: 16px;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding: 0px 0px 0px 0px;
-    font-weight: bold;
-    color: #f4d9e1; /* Align color with other elements */
+  border-radius: 16px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0px 0px 0px 0px;
+  font-weight: bold;
+  color: #f4d9e1; /* Align color with other elements */
 }
 
 #backlight {
-    border-radius: 16px;
-    margin-left: -5px;
-    padding: 0px 15px 0px 15px;
-    font-weight: bold;
-    color: #f4d9e1; /* Align color with other elements */
+  border-radius: 16px;
+  margin-left: -5px;
+  padding: 0px 15px 0px 15px;
+  font-weight: bold;
+  color: #f4d9e1; /* Align color with other elements */
+}
+#backlight:hover {
+  color: #f9e2af;
 }
 
 #pulseaudio {
-    border-radius: 16px;
-    margin-left: -5px;
-    padding: 0px 15px 0px 15px;
-    font-weight: bold;
-    color: #f4d9e1; /* Align color with other elements */
+  border-radius: 16px;
+  margin-left: -5px;
+  padding: 0px 15px 0px 15px;
+  font-weight: bold;
+  color: #f4d9e1; /* Align color with other elements */
 }
 
 #clock {
-    border-radius: 16px;
-    margin-left: -5px;
-    padding: 0px 15px 0px 15px;
-    font-weight: bold;
+  border-radius: 16px;
+  margin-left: -5px;
+  padding: 0px 15px 0px 15px;
+  font-weight: bold;
 }
 
 #battery {
-    border-radius: 16px;
-    margin-left: -5px;
-    padding: 0px 15px 0px 15px;
-    font-weight: bold;
+  border-radius: 16px;
+  margin-left: -5px;
+  padding: 0px 15px 0px 15px;
+  font-weight: bold;
 }
 
 /* Charging State */
 #battery.charging {
-    color: #a6e3a1; /* Green color for charging */
+  color: #a6e3a1; /* Green color for charging */
 }
 
 /* Plugged-in State */
 #battery.plugged {
-    color: #a6e3a1; /* Yellow color for plugged in */
+  color: #a6e3a1; /* Yellow color for plugged in */
 }
 #battery.discharging {
-    color: #f4d9e1; /* Yellow color for plugged in */
+  color: #f4d9e1; /* Yellow color for plugged in */
 }
 
 /* Warning State */
 #battery.warning {
-    color: #f9af73; /* Orange for warning */
-    background: rgba(249, 175, 115, 0.1); /* Slight background for visibility */
+  color: #f9af73; /* Orange for warning */
+  background: rgba(249, 175, 115, 0.1); /* Slight background for visibility */
 }
 
 /* Critical State */
 #battery.critical {
-    color: #ff6c6b; /* Red for critical battery */
-    background: rgba(255, 108, 107, 0.1); /* Slight background for visibility */
-    animation: blink 1s infinite; /* Blink effect for critical battery */
+  color: #ff6c6b; /* Red for critical battery */
+  background: rgba(255, 108, 107, 0.1); /* Slight background for visibility */
+  animation: blink 1s infinite; /* Blink effect for critical battery */
 }
 
 /* Animation for Critical State */
 @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-
 #power-profiles-daemon {
-    border-radius: 16px;
-    margin-left: -5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
-    color: #f4d9e1;
+  border-radius: 16px;
+  margin-left: -5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
+  color: #f4d9e1;
 }
 
 #power-profiles-daemon.performance {
-    color: #ed8796; /* Red color for performance */
+  color: #ed8796; /* Red color for performance */
 }
 
 #power-profiles-daemon.balanced {
-    color: #f9e2af; /* Yellow color for balanced profile */
+  color: #f9e2af; /* Yellow color for balanced profile */
 }
 
 /* Power-saver icon - green */
 #power-profiles-daemon.power-saver {
-    color: #a6da95; /* Green color for power-saver */
+  color: #a6da95; /* Green color for power-saver */
 }
 
 /* General Module Styling */
@@ -173,24 +181,54 @@ window#waybar {
 }
 
 #network {
-    font-size: 15px; /* Default font size for the module */
-    padding: 0px 15px 0px 15px; /* Optional padding for better alignment */
-    border-radius: 4px; /* Optional border-radius for a rounded look */
-    font-weight: bold; /* Adjust font weight if needed */
+  font-size: 15px; /* Default font size for the module */
+  padding: 0px 15px 0px 15px; /* Optional padding for better alignment */
+  border-radius: 4px; /* Optional border-radius for a rounded look */
+  font-weight: bold; /* Adjust font weight if needed */
 }
 
 #privacy {
-    font-size: 14px;              /* Default font size for the module */
-    padding: 0px 15px 0px 15px;   /* Optional padding for better alignment */
-    border-radius: 8px;           /* Optional border-radius for a rounded look */
-    font-weight: bold; 
-    color : #f38ba8           /* Adjust font weight if needed */
+  font-size: 14px; /* Default font size for the module */
+  padding: 0px 15px 0px 15px; /* Optional padding for better alignment */
+  border-radius: 8px; /* Optional border-radius for a rounded look */
+  font-weight: bold;
+  color: #f38ba8; /* Adjust font weight if needed */
 }
 
 #idle_inhibitor {
-    font-size: 14px;              /* Default font size for the module */
-    padding: 0px 20px 0px 13px;   /* Optional padding for better alignment */
-    border-radius: 8px;           /* Optional border-radius for a rounded look */
-    font-weight: bold;
+  font-size: 14px; /* Default font size for the module */
+  padding: 0px 20px 0px 13px; /* Optional padding for better alignment */
+  border-radius: 8px; /* Optional border-radius for a rounded look */
+  font-weight: bold;
+}
+#idle_inhibitor:hover {
+  color: #ff6c6b;
 }
 
+/* CPU Style */
+#cpu {
+  font-size: 15px;
+  padding: 0px 5px 0px 15px;
+  border-radius: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #f4d9e1; /* Align with overall theme */
+}
+
+#cpu:hover {
+  color: #a6e3a1; /* Hover effect for CPU module */
+}
+
+/* Memory Style */
+#memory {
+  font-size: 15px;
+  padding: 0px 15px;
+  border-radius: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #f4d9e1; /* Align with overall theme */
+}
+
+#memory:hover {
+  color: #a6e3a1; /* Hover effect for Memory module */
+}
