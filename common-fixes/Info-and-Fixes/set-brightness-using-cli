@@ -1,0 +1,15 @@
+#Install brightnessctl
+sudo pacman -S brightnessctl
+
+##Usage:
+#To check current brightness:
+brightnessctl
+
+#To set brightness to a specific percentage (e.g., 50%):
+brightnessctl set 50%
+
+
+#To increase brightness by 10%:
+brightnessctl set +10%
+
+
