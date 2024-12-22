@@ -11,11 +11,11 @@
   "modules-right": [
     "network",
     "tray",
-    "cpu",
-    "memory",
     "idle_inhibitor",
     "pulseaudio",
-    "backlight",
+    // "pulseaudio#input",
+    // "pulseaudio#output",
+    // "backlight",
     "battery",
     "power-profiles-daemon",
     "custom/swaync"
@@ -75,6 +75,19 @@
     },
     "on-click": "pamixer --toggle-mute" /* install pamixer if you dont have*/,
     "on-click-right": "pavucontrol"
+  },
+
+  "pulseaudio#input": {
+    "format-source": "",
+    "format-source-muted": " ",
+    "format": "{format_source}",
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1,
+    "max-volume": 100,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-middle": "pavucontrol",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
   },
 
   "backlight": {

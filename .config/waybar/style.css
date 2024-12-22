@@ -197,7 +197,7 @@ window#waybar {
 
 #idle_inhibitor {
   font-size: 14px; /* Default font size for the module */
-  padding: 0px 20px 0px 13px; /* Optional padding for better alignment */
+  padding: 0px 18px 0px 7px; /* Optional padding for better alignment */
   border-radius: 8px; /* Optional border-radius for a rounded look */
   font-weight: bold;
 }
