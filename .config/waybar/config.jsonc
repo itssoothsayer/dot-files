@@ -1,11 +1,13 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 30,
-  "margin-top": 0,
+  "height": 35,
+  "spacing": 5,
+  "margin-top": 7,
   "margin-bottom": 0,
-  "margin-left": 0,
-  "margin-right": 0,
+  "margin-left": 5,
+  "margin-right": 5,
+  "reload_style_on_change": true,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock", "privacy"],
   "modules-right": [
@@ -25,6 +27,7 @@
     "disable-scroll": false,
     "all-outputs": true,
     "on-click": "activate",
+    "warp-on-scroll": false,
     "format": "{icon}",
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
@@ -55,7 +58,7 @@
 
   "tray": {
     //  "icon-size": 17,
-    "spacing": 17
+    "spacing": 25
   },
 
   "clock": {
@@ -140,7 +143,7 @@
     "format-disconnected": "󰖪",
     "tooltip-format-disconnected": "Disconnected",
     "format": "<span foreground='#f4d9e1'> {bandwidthDownBytes}</span>",
-    "format-alt": "<span foreground='#f4d9e1'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>"
+    "format-alt": "<span foreground='#f4d9e1'> {bandwidthDownBytes}</span> <span foreground='#f9e2af'> {bandwidthUpBytes}</span>"
   },
 
   "privacy": {

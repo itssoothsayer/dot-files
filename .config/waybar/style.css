@@ -11,6 +11,8 @@ window#waybar {
   background: rgba(30, 30, 46, 1);
   border-bottom: 0px solid #282828;
   color: #f4d9e1;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 #workspaces {
@@ -70,9 +72,9 @@ window#waybar {
 
 #tray {
   border-radius: 16px;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding: 0px 0px 0px 0px;
+  /* margin-right: 10px; */
+  /* margin-left: 10px; */
+  padding: 0px 15px 0px 7px;
   font-weight: bold;
   color: #f4d9e1; /* Align color with other elements */
 }
@@ -158,47 +160,46 @@ window#waybar {
 }
 
 #power-profiles-daemon.performance {
-  color: #ed8796; /* Red color for performance */
+  color: #ed8796;
 }
 
 #power-profiles-daemon.balanced {
-  color: #f9e2af; /* Yellow color for balanced profile */
+  color: #f9e2af;
 }
 
 /* Power-saver icon - green */
 #power-profiles-daemon.power-saver {
-  color: #a6da95; /* Green color for power-saver */
+  color: #a6da95;
 }
 
 /* General Module Styling */
 #custom-swaync {
-  padding: 0 10px;
   border-radius: 20px;
   padding: 0px 15px 0px 8px;
-  background-color: transparent; /* Adjust to your theme */
-  color: #f4d9e1; /* Adjust to your theme */
+  background-color: transparent;
+  color: #f4d9e1;
   font-weight: bold;
 }
 
 #network {
-  font-size: 15px; /* Default font size for the module */
-  padding: 0px 15px 0px 15px; /* Optional padding for better alignment */
-  border-radius: 4px; /* Optional border-radius for a rounded look */
-  font-weight: bold; /* Adjust font weight if needed */
+  font-size: 15px;
+  padding: 0px 15px 0px 15px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 #privacy {
-  font-size: 14px; /* Default font size for the module */
-  padding: 0px 15px 0px 15px; /* Optional padding for better alignment */
-  border-radius: 8px; /* Optional border-radius for a rounded look */
+  font-size: 14px;
+  padding: 0px 15px 0px 15px;
+  border-radius: 8px;
   font-weight: bold;
-  color: #f38ba8; /* Adjust font weight if needed */
+  color: #f38ba8;
 }
 
 #idle_inhibitor {
-  font-size: 14px; /* Default font size for the module */
-  padding: 0px 18px 0px 7px; /* Optional padding for better alignment */
-  border-radius: 8px; /* Optional border-radius for a rounded look */
+  font-size: 14px;
+  padding: 0px 15px 0px 7px;
+  border-radius: 8px;
   font-weight: bold;
 }
 #idle_inhibitor:hover {
@@ -212,23 +213,22 @@ window#waybar {
   border-radius: 16px;
   font-weight: bold;
   background-color: transparent;
-  color: #f4d9e1; /* Align with overall theme */
+  color: #f4d9e1;
 }
 
 #cpu:hover {
-  color: #a6e3a1; /* Hover effect for CPU module */
+  color: #a6e3a1;
 }
 
-/* Memory Style */
 #memory {
   font-size: 15px;
   padding: 0px 15px;
   border-radius: 16px;
   font-weight: bold;
   background-color: transparent;
-  color: #f4d9e1; /* Align with overall theme */
+  color: #f4d9e1;
 }
 
 #memory:hover {
-  color: #a6e3a1; /* Hover effect for Memory module */
+  color: #a6e3a1;
 }
