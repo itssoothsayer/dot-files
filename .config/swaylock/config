@@ -1,0 +1,18 @@
+ignore-empty-password
+font=JetBrainsNerd Font Mono
+image=/home/soothsayer/Pictures/Wallpapers/ML4W/wallpaper/Fantasy-Landscape3.png
+
+# Lock screen indicator settings
+indicator-radius 150            # Size of the lock indicator
+indicator-thickness 7           # Thickness of the indicator ring
+indicator-color #74c7ec         # Color of the indicator
+ring-color #74c7ec              # Color of the outer ring of the indicator
+line-color #cdd6f4              # Color of the line between the inside and the ring
+key-hl-color #f38ba8            # Color of the highlighted key when pressed
+
+# Font and text settings
+font "JetBrainsMono Nerd Font"  # Font to use for the time/date
+font-size 48                    # Font size for the indicator
+text-color #cdd6f4              # Text color for the time and date
+text-ver-color #cdd6f4          # Color when verifying
+
