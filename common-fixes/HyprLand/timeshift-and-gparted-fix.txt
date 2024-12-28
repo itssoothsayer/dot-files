@@ -1,0 +1,4 @@
+#Make sure you have installed a polkit agen (gnome-polkit) and xorg-xhost
+
+sudo pacman -S gnome-pokit
+sudo pacman -S xorg-xhost
