@@ -1,0 +1,18 @@
+#To list the power profiles use the command:
+powerprofilesctl list
+
+#Output will be like this:
+* performance:
+    CpuDriver:	amd_pstate
+    Degraded:   no
+
+  balanced:
+    CpuDriver:	amd_pstate
+    PlatformDriver:	placeholder
+
+  power-saver:
+    CpuDriver:	amd_pstate
+    PlatformDriver:	placeholder
+
+#To set a certain power profile
+powerprofilesctl set power-saver

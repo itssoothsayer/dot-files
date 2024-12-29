@@ -1,0 +1,3 @@
+#To configure what power button do when pressed go to the file /etc/systemd/logind.conf
+
+#and add or uncomment the line HandlePowerKey=suspend
