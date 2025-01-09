@@ -1,0 +1,6 @@
+Install these and reconnect your device.
+
+❯ sudo pacman -S gvfs-mtp mtpfs android-tools
+❯ sudo udevadm control --reload-rules && sudo udevadm trigger
+
+
