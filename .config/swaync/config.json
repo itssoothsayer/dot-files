@@ -29,7 +29,7 @@
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "widgets": ["inhibitors", "title", "dnd", "notifications"],
+  // "widgets": ["inhibitors", "title", "dnd", "notifications"],
   "widget-config": {
     "inhibitors": {
       "text": "Inhibitors",
@@ -71,5 +71,6 @@
     }
   },
 
-  "widgets": ["title", "notifications", "mpris", "volume"]
+  "widgets": ["title", "dnd", "notifications", "mpris", "volume"]
 }
+
