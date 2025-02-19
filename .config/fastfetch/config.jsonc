@@ -18,6 +18,11 @@
       "keyColor": "magenta"
     },
     {
+      "type": "wm",
+      "key": " WM",
+      "keyColor": "cyan"
+    },
+    {
       "type": "packages",
       "key": "󰏖 Packages",
       "keyColor": "magenta"
@@ -55,4 +60,3 @@
     }
   ]
 }
-
