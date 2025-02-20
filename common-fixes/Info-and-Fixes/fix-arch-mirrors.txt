@@ -1,0 +1,9 @@
+#First if you dont have any mirror working edit the mirror file sudo nano /etc/pacman.d/endeavouros-mirrorlist manually.
+#You can choose the mirror from internet. Example -> Server = https://mirror.accum.se/mirror/endeavouros/repo/$repo/$arch.
+
+#Install rate-mirrors
+yay -S rate-mirrors
+
+#Update EndeavourOS Mirrors
+rate-mirrors endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist
+sudo pacman -Syyu
