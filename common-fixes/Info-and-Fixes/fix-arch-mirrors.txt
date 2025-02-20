@@ -5,5 +5,5 @@
 yay -S rate-mirrors
 
 #Update EndeavourOS Mirrors
-rate-mirrors endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist
+rate-mirrors --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist
 sudo pacman -Syyu
