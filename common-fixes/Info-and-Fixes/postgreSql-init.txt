@@ -1,0 +1,12 @@
+Step 1) Install postgresql
+sudo pacman -S postgresql
+
+Step 2) Initialise the DB
+sudo -u postgres initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
+
+Step 3) Start the DB
+sudo systemctl start postgresql
+
+Step 4) To use the postgresql
+sudo -i -u postgres
+
