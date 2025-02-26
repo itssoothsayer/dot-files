@@ -47,3 +47,9 @@ SAVEHIST=10000
 setopt append_history        # Append new commands to the history file instead of overwriting it
 setopt inc_append_history    # Save each command to the history file as soon as it is executed
 setopt share_history         # Share command history across multiple terminal sessions
+
+
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
