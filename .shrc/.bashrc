@@ -33,3 +33,5 @@ eval "$(fzf --bash)"
 export _ZO_FZF_OPTS="--preview 'ls -lh {}' --preview-window=up:30%:hidden"
 
 eval "$(starship init bash)"
+
+alias fnano='FILE="$(find ~ /mnt/ -type f | fzf --border --height=40%)"; [ -n "$FILE" ] && nano "$FILE"'
