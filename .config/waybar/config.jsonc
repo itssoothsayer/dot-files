@@ -3,23 +3,23 @@
   "layer": "top",
   "height": 35,
   "spacing": 5,
-  "margin-top": 7,
+  "margin-top": 6,
   "margin-bottom": 0,
-  "margin-left": 5,
-  "margin-right": 5,
+  "margin-left": 7,
+  "margin-right": 7,
   "reload_style_on_change": true,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock", "privacy"],
   "modules-right": [
     "network",
     "tray",
-    "idle_inhibitor",
+    // "idle_inhibitor",
     "pulseaudio",
     // "pulseaudio#input",
     // "pulseaudio#output",
     // "backlight",
     "battery",
-    "power-profiles-daemon",
+    // "power-profiles-daemon",
     "custom/swaync"
   ],
 
@@ -32,6 +32,27 @@
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
     "cursor": false
+  },
+
+  "wlr/taskbar": {
+    // "format": "{icon} {app_id} {state}",
+    "format": "{icon}",
+    "icon-size": 16,
+    "tooltip": false,
+    "on-click": "activate",
+    "on-click-right": "close",
+    "current-workspace-only": false,
+    "active-first": true
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "󰈹 $1",
+      "(.*) - Code - OSS": " $1",
+      "(.*) - Thorium": " $1"
+    },
+    "separate-outputs": true
   },
 
   "battery": {
@@ -69,7 +90,7 @@
 
   "pulseaudio": {
     "format": "{icon}",
-    // "format-alt": "{icon}  {volume}%",
+    // "format-alt": "{icon} {volume}%",
     "tooltip": true,
     "tooltip-format": "Volume: {volume}%",
     "format-muted": "",
