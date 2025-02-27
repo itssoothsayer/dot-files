@@ -1,0 +1,76 @@
+* {
+    background-image: none;
+    font-size: 20px;
+    font-family: "Fira Code";
+}
+
+window {
+    background-color: rgba(17, 17, 17, 0.45)
+}
+
+button {
+    border-radius: 0px;
+    color: #b4befe;
+    border-color: #b4befe;
+    background-color: rgba(17, 17, 27, 0.781);
+    outline-style: none;
+    border-style: solid;
+	border-width: 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+}
+
+button:hover,button:focus {
+    background-color: rgba(37, 37, 68, 0.541);
+    background-size: 30%;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+#lock {
+    border-top-left-radius: 50px;
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    border-bottom-left-radius: 50px;
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    border-top-right-radius: 50px;
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    border-bottom-right-radius: 50px;
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}
+
+#lock, #suspend,#hibernate {
+    border-bottom: #b4befe solid 1px;
+}
+
+#logout,#shutdown,#reboot {
+    border-top: #b4befe solid 1px;
+}
+
+#logout,#lock,#suspend,#shutdown{
+    border-right: #b4befe solid 1px;
+}
+
+#suspend,#shutdown,#hibernate,#reboot{
+    border-left: #b4befe solid 1px;
+}

@@ -29,4 +29,15 @@ else
     echo "Failed to start Radarr."
 fi
 
+
+# Start Whisparr
+echo "Starting Radarr service..."
+sudo systemctl start whisparr
+if [ $? -eq 0 ]; then
+    echo "Whisparr started successfully."
+else
+    echo "Failed to start Whisparr."
+fi
+
+
 echo "All services attempted to start."

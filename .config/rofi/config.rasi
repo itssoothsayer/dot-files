@@ -3,9 +3,9 @@ configuration {
     show-icons: true;
     font: "JetBrainsMono Nerd Font 12";
     drun-display-format: "{name}";  // Only show the app name
-    matching: "prefix";  // Search by exact letters only
-    sort: true;  // Enable sorting
-    sorting-method: "levenshtein";
+    //matching: "prefix";  // Search by exact letters only
+    //sort: true;  // Enable sorting
+    //sorting-method: "levenshtein";
     case-sensitive: false;  // Ignore case when searching
     fuzzy: false;  // Fully disable fuzzy search
     
