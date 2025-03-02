@@ -59,6 +59,8 @@ gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 # Apply the icon theme using gsettings
 gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 
+flatpak --user override --env=GTK_THEME="$GTK_THEME"
+
 #Reloading waybar swaync css hyprpaper and hyprland
 pkill -SIGUSR2 waybar
 swaync-client -rs
