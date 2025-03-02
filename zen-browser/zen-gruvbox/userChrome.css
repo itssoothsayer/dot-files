@@ -217,3 +217,9 @@
     --identity-icon-color: #8f3f71 !important; /* Gruvbox Light Darker Purple */
   }
 }
+
+
+input::selection, textarea::selection {
+    background-color: #FBF1C7 !important;
+    color: #000000 !important;
+

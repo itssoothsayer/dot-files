@@ -156,3 +156,13 @@
     }
   }
 }
+
+::selection {
+    background-color: #FBF1C7 !important; /* Light Cream */
+    color: #000000 !important; /* Black */
+}
+
+input::selection, textarea::selection {
+    background-color: #FBF1C7 !important;
+    color: #000000 !important;
+}
