@@ -1,0 +1,219 @@
+/* Catppuccin Mocha Pink userChrome.css*/
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --zen-colors-primary: #282828 !important; /* Background */
+    --zen-primary-color: #f7e0ab !important; /* Red */
+    --zen-colors-secondary: #282828 !important; /* Background */
+    --zen-colors-tertiary: #1d2021 !important; /* Harder Background */
+    --zen-colors-border: #f7e0ab !important; /* Red */
+    --toolbarbutton-icon-fill: #f7e0ab !important; /* Red */
+    --lwt-text-color: #ebdbb2 !important; /* Foreground */
+    --toolbar-field-color: #ebdbb2 !important; /* Foreground */
+    --tab-selected-textcolor: #d3869b !important; /* Purple/Magenta */
+    --toolbar-field-focus-color: #ebdbb2 !important; /* Foreground */
+    --toolbar-color: #ebdbb2 !important; /* Foreground */
+    --newtab-text-primary-color: #ebdbb2 !important; /* Foreground */
+    --arrowpanel-color: #ebdbb2 !important; /* Foreground */
+    --arrowpanel-background: #1d2021 !important; /* Harder Background */
+    --sidebar-text-color: #ebdbb2 !important; /* Foreground */
+    --lwt-sidebar-text-color: #ebdbb2 !important; /* Foreground */
+    --lwt-sidebar-background-color: #1d2021 !important; /* Harder Background */
+    --toolbar-bgcolor: #282828 !important; /* Background */
+    --newtab-background-color: #1d2021 !important; /* Harder Background */
+    --zen-themed-toolbar-bg: #1d2021 !important; /* Harder Background */
+    --zen-main-browser-background: #1d2021 !important; /* Harder Background */
+  }
+
+  #permissions-granted-icon {
+    color: #1d2021 !important; /* Harder Background */
+  }
+
+  .sidebar-placesTree {
+    background-color: #1d2021 !important; /* Harder Background */
+  }
+
+  #zen-workspaces-button {
+    background-color: #1d2021 !important; /* Harder Background */
+  }
+
+  #TabsToolbar {
+    background-color: #1d2021 !important; /* Harder Background */
+  }
+
+  #urlbar-background {
+    background-color: #1d2021 !important; /* Harder Background */
+  }
+
+  .content-shortcuts {
+    background-color: #1d2021 !important; /* Harder Background */
+    border-color: #f7e0ab !important; /* Red */
+  }
+
+  .urlbarView-url {
+    color: #f7e0ab !important; /* Red */
+  }
+
+  #zenEditBookmarkPanelFaviconContainer {
+    background: #1d2021 !important; /* Harder Background */
+  }
+
+  toolbar .toolbarbutton-1 {
+    &:not([disabled]) {
+      &:is([open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+        fill: #1d2021; /* Harder Background */
+      }
+    }
+  }
+
+  .identity-color-blue {
+    --identity-tab-color: #83a598 !important; /* Aqua */
+    --identity-icon-color: #83a598 !important; /* Aqua */
+  }
+
+  .identity-color-turquoise {
+    --identity-tab-color: #8ec07c !important; /* Green */
+    --identity-icon-color: #8ec07c !important; /* Green */
+  }
+
+  .identity-color-green {
+    --identity-tab-color: #b8bb26 !important; /* Yellow */
+    --identity-icon-color: #b8bb26 !important; /* Yellow */
+  }
+
+  .identity-color-yellow {
+    --identity-tab-color: #d79921 !important; /* Orange */
+    --identity-icon-color: #d79921 !important; /* Orange */
+  }
+
+  .identity-color-orange {
+    --identity-tab-color: #fe8019 !important; /* Bright Orange */
+    --identity-icon-color: #fe8019 !important; /* Bright Orange */
+  }
+
+  .identity-color-red {
+    --identity-tab-color: #f7e0ab !important; /* Red */
+    --identity-icon-color: #f7e0ab !important; /* Red */
+  }
+
+  .identity-color-pink {
+    --identity-tab-color: #d3869b !important; /* Purple/Magenta */
+    --identity-icon-color: #d3869b !important; /* Purple/Magenta */
+  }
+
+  .identity-color-purple {
+    --identity-tab-color: #8f3f71 !important; /* Darker Purple */
+    --identity-icon-color: #8f3f71 !important; /* Darker Purple */
+  }
+}
+
+/* Catppuccin Latte Pink userChrome.css*/
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    --zen-colors-primary: #fbf1c7 !important; /* Gruvbox Light Background */
+    --zen-primary-color: #cc241d !important; /* Gruvbox Light Red */
+    --zen-colors-secondary: #fbf1c7 !important; /* Gruvbox Light Background */
+    --zen-colors-tertiary: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+    --zen-colors-border: #cc241d !important; /* Gruvbox Light Red */
+    --toolbarbutton-icon-fill: #cc241d !important; /* Gruvbox Light Red */
+    --lwt-text-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --toolbar-field-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --tab-selected-textcolor: #b16286 !important; /* Gruvbox Light Purple/Magenta */
+    --toolbar-field-focus-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --toolbar-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --newtab-text-primary-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --arrowpanel-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --arrowpanel-background: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+    --sidebar-text-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --lwt-sidebar-text-color: #3c3836 !important; /* Gruvbox Light Foreground */
+    --lwt-sidebar-background-color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+    --toolbar-bgcolor: #fbf1c7 !important; /* Gruvbox Light Background */
+    --newtab-background-color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+    --zen-themed-toolbar-bg: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+    --zen-main-browser-background: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+  }
+
+  #permissions-granted-icon {
+    color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+  }
+
+  .sidebar-placesTree {
+    background-color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+  }
+
+  #zen-workspaces-button {
+    background-color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+  }
+
+  #TabsToolbar {
+    background-color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+  }
+
+  #urlbar-background {
+    background-color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+  }
+
+  .content-shortcuts {
+    background-color: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+    border-color: #cc241d !important; /* Gruvbox Light Red */
+  }
+
+  .urlbarView-url {
+    color: #cc241d !important; /* Gruvbox Light Red */
+  }
+
+  #zenEditBookmarkPanelFaviconContainer {
+    background: #f9f5d7 !important; /* Gruvbox Light Harder Background */
+  }
+
+  toolbar .toolbarbutton-1 {
+    &:not([disabled]) {
+      &:is([open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+        fill: #f9f5d7; /* Gruvbox Light Harder Background */
+      }
+    }
+  }
+
+  .identity-color-blue {
+    --identity-tab-color: #458588 !important; /* Gruvbox Light Aqua */
+    --identity-icon-color: #458588 !important; /* Gruvbox Light Aqua */
+  }
+
+  .identity-color-turquoise {
+    --identity-tab-color: #689d6a !important; /* Gruvbox Light Green */
+    --identity-icon-color: #689d6a !important; /* Gruvbox Light Green */
+  }
+
+  .identity-color-green {
+    --identity-tab-color: #98971a !important; /* Gruvbox Light Yellow */
+    --identity-icon-color: #98971a !important; /* Gruvbox Light Yellow */
+  }
+
+  .identity-color-yellow {
+    --identity-tab-color: #d65d0e !important; /* Gruvbox Light Orange */
+    --identity-icon-color: #d65d0e !important; /* Gruvbox Light Orange */
+  }
+
+  .identity-color-orange {
+    --identity-tab-color: #af3a03 !important; /* Gruvbox Light Bright Orange */
+    --identity-icon-color: #af3a03 !important; /* Gruvbox Light Bright Orange */
+  }
+
+  .identity-color-red {
+    --identity-tab-color: #cc241d !important; /* Gruvbox Light Red */
+    --identity-icon-color: #cc241d !important; /* Gruvbox Light Red */
+  }
+
+  .identity-color-pink {
+    --identity-tab-color: #b16286 !important; /* Gruvbox Light Purple/Magenta */
+    --identity-icon-color: #b16286 !important; /* Gruvbox Light Purple/Magenta */
+  }
+
+  .identity-color-purple {
+    --identity-tab-color: #8f3f71 !important; /* Gruvbox Light Darker Purple */
+    --identity-icon-color: #8f3f71 !important; /* Gruvbox Light Darker Purple */
+  }
+}

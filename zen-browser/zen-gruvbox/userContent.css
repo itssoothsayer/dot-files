@@ -1,0 +1,158 @@
+/* Gruvbox Dark userContent.css */
+
+@media (prefers-color-scheme: dark) {
+
+  /* Common variables affecting all pages */
+  @-moz-document url-prefix("about:") {
+    :root {
+      --in-content-page-color: #ebdbb2 !important; /* Foreground */
+      --color-accent-primary: #f7e0ab !important; /* Red */
+      --color-accent-primary-hover: #f36f60 !important; /* Lighter Red */
+      --color-accent-primary-active: #fa2a13 !important; /* Darker Red */
+      background-color: #1d2021 !important; /* Harder Background */
+      --in-content-page-background: #1d2021 !important; /* Harder Background */
+    }
+  }
+
+  /* Variables and styles specific to about:newtab and about:home */
+  @-moz-document url("about:newtab"), url("about:home") {
+
+    :root {
+      --newtab-background-color: #1d2021 !important; /* Harder Background */
+      --newtab-background-color-secondary: #282828 !important; /* Background */
+      --newtab-element-hover-color: #282828 !important; /* Background */
+      --newtab-text-primary-color: #ebdbb2 !important; /* Foreground */
+      --newtab-wordmark-color: #ebdbb2 !important; /* Foreground */
+      --newtab-primary-action-background: #f7e0ab !important; /* Red */
+    }
+
+    .icon {
+      color: #f7e0ab !important; /* Red */
+    }
+
+    .search-wrapper .logo-and-wordmark .logo {
+      /* Replace with Gruvbox Dark Logo or keep your original logo*/
+      background: url("zen-logo-gruvbox.svg") no-repeat center !important;
+      display: inline-block !important;
+      height: 82px !important;
+      width: 82px !important;
+      background-size: 82px !important;
+    }
+
+    @media (max-width: 609px) {
+      .search-wrapper .logo-and-wordmark .logo {
+        background-size: 64px !important;
+        height: 64px !important;
+        width: 64px !important;
+      }
+    }
+
+    .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
+      color: #f7e0ab !important; /* Red */
+    }
+
+    .top-site-outer .search-topsite {
+      background-color: #83a598 !important; /* Aqua */
+    }
+
+    .compact-cards .card-outer .card-context .card-context-icon.icon-download {
+      fill: #b8bb26 !important; /* Yellow */
+    }
+  }
+
+  /* Variables and styles specific to about:preferences */
+  @-moz-document url-prefix("about:preferences") {
+    :root {
+      --zen-colors-tertiary: #1d2021 !important; /* Harder Background */
+      --in-content-text-color: #ebdbb2 !important; /* Foreground */
+      --link-color: #f7e0ab !important; /* Red */
+      --link-color-hover: #f36f60 !important; /* Lighter Red */
+      --zen-colors-primary: #282828 !important; /* Background */
+      --in-content-box-background: #282828 !important; /* Background */
+      --zen-primary-color: #f7e0ab !important; /* Red */
+    }
+
+    groupbox,
+    moz-card {
+      background: #1d2021 !important; /* Harder Background */
+    }
+
+    button,
+    groupbox menulist {
+      background: #282828 !important; /* Background */
+      color: #ebdbb2 !important; /* Foreground */
+    }
+
+    .main-content {
+      background-color: #1d2021 !important; /* Harder Background */
+    }
+
+    .identity-color-blue {
+      --identity-tab-color: #83a598 !important; /* Aqua */
+      --identity-icon-color: #83a598 !important; /* Aqua */
+    }
+
+    .identity-color-turquoise {
+      --identity-tab-color: #8ec07c !important; /* Green */
+      --identity-icon-color: #8ec07c !important; /* Green */
+    }
+
+    .identity-color-green {
+      --identity-tab-color: #b8bb26 !important; /* Yellow */
+      --identity-icon-color: #b8bb26 !important; /* Yellow */
+    }
+
+    .identity-color-yellow {
+      --identity-tab-color: #d79921 !important; /* Orange */
+      --identity-icon-color: #d79921 !important; /* Orange */
+    }
+
+    .identity-color-orange {
+      --identity-tab-color: #fe8019 !important; /* Bright Orange */
+      --identity-icon-color: #fe8019 !important; /* Bright Orange */
+    }
+
+    .identity-color-red {
+      --identity-tab-color: #f7e0ab !important; /* Red */
+      --identity-icon-color: #f7e0ab !important; /* Red */
+    }
+
+    .identity-color-pink {
+      --identity-tab-color: #d3869b !important; /* Purple/Magenta */
+      --identity-icon-color: #d3869b !important; /* Purple/Magenta */
+    }
+
+    .identity-color-purple {
+      --identity-tab-color: #8f3f71 !important; /* Darker Purple */
+      --identity-icon-color: #8f3f71 !important; /* Darker Purple */
+    }
+  }
+
+  /* Variables and styles specific to about:addons */
+  @-moz-document url-prefix("about:addons") {
+    :root {
+      --zen-dark-color-mix-base: #1d2021 !important; /* Harder Background */
+      --background-color-box: #1d2021 !important; /* Harder Background */
+    }
+  }
+
+  /* Variables and styles specific to about:protections */
+  @-moz-document url-prefix("about:protections") {
+    :root {
+      --zen-primary-color: #1d2021 !important; /* Harder Background */
+      --social-color: #8f3f71 !important; /* Darker Purple */
+      --coockie-color: #83a598 !important; /* Aqua */
+      --fingerprinter-color: #d79921 !important; /* Orange */
+      --cryptominer-color: #83a598 !important; /* Aqua */
+      --tracker-color: #b8bb26 !important; /* Yellow */
+      --in-content-primary-button-background-hover: #3c3836 !important; /* Foreground */
+      --in-content-primary-button-text-color-hover: #ebdbb2 !important; /* Foreground */
+      --in-content-primary-button-background: #282828 !important; /* Background */
+      --in-content-primary-button-text-color: #ebdbb2 !important; /* Foreground */
+    }
+
+    .card {
+      background-color: #282828 !important; /* Background */
+    }
+  }
+}
