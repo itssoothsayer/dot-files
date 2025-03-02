@@ -1,0 +1,235 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
+  font-style: normal;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgb(29, 32, 33);
+  border-bottom: 0px solid #282828;
+  color: #f2deb5;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+#workspaces {
+  margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 16px;
+  border: solid 0px #f2deb5;
+  font-weight: bold;
+  font-style: normal;
+}
+
+#workspaces button {
+  padding: 0px 5px;
+  border-radius: 16px;
+  color: #686868;
+  font-weight: bolder; /* Increased boldness */
+  font-size: 16px; /* Increase font size for better visibility */
+}
+
+#workspaces button.active {
+  color: #f2deb5;
+  background-color: transparent;
+  border-radius: 16px;
+  font-weight: bolder;
+}
+
+#workspaces button:hover {
+  background-color: #f2deb5;
+  color: black;
+  border-radius: 16px;
+}
+
+@keyframes blinkText {
+  0% {
+    color: #f2deb5; /* Normal color (light) */
+    font-size: 14px; /* Normal font size */
+  }
+  50% {
+    color: #ff0037; /* Urgent color (red) */
+    font-size: 18px; /* Larger font size when blinking */
+  }
+  100% {
+    color: #f2deb5; /* Back to normal color (light) */
+    font-size: 14px; /* Back to normal font size */
+  }
+}
+
+#workspaces button.urgent {
+  background-color: transparent; /* Transparent background */
+  color: #f2deb5; /* Normal color for text */
+  font-size: 14px; /* Normal font size (override global if needed) */
+  border-radius: 9px;
+  padding: 0px 5px; /* Padding for spacing */
+  animation: blinkText 1s infinite; /* Blinking text color and font size animation */
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for font size */
+}
+
+#tray {
+  border-radius: 16px;
+  /* margin-right: 10px; */
+  margin-left: 10px;
+  /* padding: 0px 15px 0px 7px; */
+  font-weight: bold;
+  color: #f2deb5; /* Align color with other elements */
+}
+
+#backlight {
+  border-radius: 16px;
+  margin-left: -5px;
+  padding: 0px 15px 0px 15px;
+  font-weight: bold;
+  color: #f2deb5; /* Align color with other elements */
+}
+#backlight:hover {
+  color: #f2deb5;
+}
+
+#pulseaudio {
+  border-radius: 16px;
+  margin-left: 25px;
+  padding: 0px 10px 0px 0px;
+  font-weight: bold;
+  color: #f2deb5; /* Align color with other elements */
+}
+
+#clock {
+  border-radius: 16px;
+  /* margin-left: -5px; */
+  padding: 0px 15px 0px 15px;
+  font-weight: bold;
+}
+
+#battery {
+  border-radius: 16px;
+  margin-left: 15px;
+  /* padding: 0px 15px 0px 15px; */
+  font-weight: bold;
+}
+
+/* Charging State */
+#battery.charging {
+  color: #a6e3a1; /* Green color for charging */
+}
+
+/* Plugged-in State */
+#battery.plugged {
+  color: #a6e3a1; /* Yellow color for plugged in */
+}
+#battery.discharging {
+  color: #f2deb5; /* Yellow color for plugged in */
+}
+
+/* Warning State */
+#battery.warning {
+  color: #f9af73; /* Orange for warning */
+  background: rgba(249, 175, 115, 0.1); /* Slight background for visibility */
+}
+
+/* Critical State */
+#battery.critical {
+  color: #ff6c6b; /* Red for critical battery */
+  background: rgba(255, 108, 107, 0.1); /* Slight background for visibility */
+  animation: blink 1s infinite; /* Blink effect for critical battery */
+}
+
+/* Animation for Critical State */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#power-profiles-daemon {
+  border-radius: 16px;
+  margin-left: 25px;
+  /* padding: 0px 10px 0px 10px; */
+  font-weight: bold;
+  color: #f2deb5;
+}
+
+#power-profiles-daemon.performance {
+  color: #ed8796;
+}
+
+#power-profiles-daemon.balanced {
+  color: #f9e2af;
+}
+
+/* Power-saver icon - green */
+#power-profiles-daemon.power-saver {
+  color: #a6da95;
+}
+
+#custom-swaync {
+  /* border-radius: 20px; */
+  /* padding: 0px 10px 0px 10px; */
+  margin-left: 25px;
+  margin-right: 15px;
+  background-color: transparent;
+  color: #f2deb5;
+  font-weight: bold;
+}
+
+#network {
+  font-size: 15px;
+  padding: 0px 15px 0px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#privacy {
+  font-size: 14px;
+  padding: 0px 15px 0px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #f38ba8;
+}
+
+#idle_inhibitor {
+  font-size: 14px;
+  padding: 0px 15px 0px 7px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+#idle_inhibitor:hover {
+  color: #ff6c6b;
+}
+
+/* CPU Style */
+#cpu {
+  font-size: 15px;
+  padding: 0px 5px 0px 15px;
+  border-radius: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #f2deb5;
+}
+
+#cpu:hover {
+  color: #a6e3a1;
+}
+
+#memory {
+  font-size: 15px;
+  padding: 0px 15px;
+  border-radius: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #f2deb5;
+}
+
+#memory:hover {
+  color: #a6e3a1;
+}
