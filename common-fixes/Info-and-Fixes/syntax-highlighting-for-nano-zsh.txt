@@ -1,0 +1,16 @@
+#Add this line to ~/.nanorc
+include /usr/share/nano/*.nanorc
+
+#Verify Syntax Files Exist
+ls /usr/share/nano/
+
+#Reload Nano Config
+nano ~/.nanorc
+
+
+# For zsh
+sudo pacman -S zsh-autosuggestions 
+sudo pacman -S zsh-syntax-highlighting
+
+#Reload .zshrc
+source ~/.zshrc  
