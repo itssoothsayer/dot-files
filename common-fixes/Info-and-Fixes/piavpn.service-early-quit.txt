@@ -1,0 +1,34 @@
+#Edit the desktop file at /usr/share/applications/piavpn.desktop 
+#You just have to edit the Exec line
+
+[Desktop Entry]
+Type=Application
+Name=Private Internet Access
+Comment=Private Internet Access VPN client
+Path=/opt/piavpn/bin/
+Exec=sh -c "sudo systemctl start piavpn.service && /opt/piavpn/bin/pia->
+Icon=piavpn
+Terminal=false
+Categories=Network
+StartupWMClass=pia-client
+MimeType=x-scheme-handler/piavpn
+
+#Then disable the piavpn.service from autostarting
+systemctl disable piavpn.service
+
+#The edit the service so it doesn't take too long to shut down in case its running /etc/systemd/system/piavpn.service
+[Unit]
+Description=Private Internet Access daemon
+After=syslog.target network.target
+
+[Service]
+Environment="LD_LIBRARY_PATH=/opt/piavpn/lib"
+ExecStart=/opt/piavpn/bin/pia-daemon
+TimeoutStopSec=1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+#Reload
+sudo systemctl daemon-reload 
