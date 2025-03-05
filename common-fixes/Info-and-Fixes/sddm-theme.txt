@@ -1,0 +1,31 @@
+#Download the sddm package and uwsm package if you want to use uwsm
+#To autostart sddm and uswm
+sudo systemctl enable sddm 
+sudo systemctl enable uswm
+
+#If you want to start the sddm right now (it will log you out)  
+sudo systemctl start sddm
+#Download the sddm theme example:
+yay -S sddm-astronaut-theme
+
+#Go the the sddm theme directory
+cd /usr/share/sddm/themes
+
+#It should show something like this
+usr/share/sddm/themes🔒 
+❯ ls
+catppuccin-mocha  elarun  maldives  maya  sddm-astronaut-theme	sugar-dark
+
+#So lets say you want to apply sddm-astronaut-theme, go to the directory 
+cd /etc/sddm.conf.d
+
+#if not create it and edit the file
+sudo nano /etc/sddm.conf.d/theme.conf  
+
+#Should look like this
+[Theme]
+Current=sddm-astronaut-theme
+
+#And you are done. Also in the usr/share/sddm/themes/sddm-astronaut-theme directory you can change the theme style by running the setup.sh script.
+
+
