@@ -106,6 +106,10 @@
     --identity-tab-color: #cba6f7 !important;
     --identity-icon-color: #cba6f7 !important;
   }
+
+  .tab-close-button {
+    display: none !important;
+  }
 }
 
 
@@ -216,5 +220,8 @@
   .identity-color-purple {
     --identity-tab-color: #8839ef !important;
     --identity-icon-color: #8839ef !important;
+  }
+  .tab-close-button {
+  display: none !important;
   }
 }
