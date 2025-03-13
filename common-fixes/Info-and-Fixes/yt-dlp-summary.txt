@@ -1,0 +1,58 @@
+#YT-DLP COMMANDS SUMMARY
+
+
+#Basic Commands
+#Download a single video (default settings):
+yt-dlp "<YouTube-URL>"
+
+#Download only audio:
+yt-dlp -x "<YouTube-URL>"
+
+#Download audio as MP3:
+yt-dlp -x --audio-format mp3 "<YouTube-URL>"
+
+
+#Playlist Downloads
+#Download a full playlist (default settings):
+yt-dlp "<Playlist-URL>"
+
+#Save in a playlist folder with proper names:
+yt-dlp -o "%(playlist)s/%(title)s.%(ext)s" "<Playlist-URL>"
+
+#Save with numbered filenames (01, 02, ...):
+#02d* ensures numbers are zero-padded (01, 02, 10, etc.) for proper sorting.*
+yt-dlp -o "%(playlist)s/%(playlist_index)02d %(title)s.%(ext)s" "<Playlist-URL>"
+
+
+#Quality Selection
+#Best available video + audio:
+yt-dlp -f "bestvideo+bestaudio/best" "<YouTube-URL>"
+
+#Force 1080p max quality:
+yt-dlp -f "bestvideo[height<=1080]+bestaudio/best" "<YouTube-URL>"
+
+#Download highest-quality audio and video separately & merge them:
+yt-dlp -f "bv*+ba/best" "<YouTube-URL>"
+
+
+#Custom Save Location
+#Save all downloads in ~/Videos folder:
+yt-dlp -o "~/Videos/%(title)s.%(ext)s" "<YouTube-URL>"
+
+#Save audio files in ~/Music folder:
+yt-dlp -x -o "~/Music/%(title)s.%(ext)s" "<YouTube-URL>"
+
+
+#Other Useful Options
+#Download subtitles:
+yt-dlp --write-auto-sub "<YouTube-URL>"
+
+#Download only subtitles (without video):
+yt-dlp --write-auto-sub --skip-download "<YouTube-URL>"
+
+#List all available formats:
+yt-dlp -F "<YouTube-URL>"
+
+#Resume an interrupted download:
+yt-dlp -c "<YouTube-URL>"
+
