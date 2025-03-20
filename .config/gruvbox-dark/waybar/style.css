@@ -106,7 +106,7 @@ window#waybar {
 }
 
 #battery {
-  border-radius: 16px;
+  border-radius: 5px;
   margin-left: 15px;
   /* padding: 0px 15px 0px 15px; */
   font-weight: bold;
@@ -128,13 +128,13 @@ window#waybar {
 /* Warning State */
 #battery.warning {
   color: #f9af73; /* Orange for warning */
-  background: rgba(249, 175, 115, 0.1); /* Slight background for visibility */
+  background: rgba(249, 175, 115, 0); /* Slight background for visibility */
 }
 
 /* Critical State */
 #battery.critical {
   color: #ff6c6b; /* Red for critical battery */
-  background: rgba(255, 108, 107, 0.1); /* Slight background for visibility */
+  background: rgba(255, 108, 107, 0); /* Slight background for visibility */
   animation: blink 1s infinite; /* Blink effect for critical battery */
 }
 
