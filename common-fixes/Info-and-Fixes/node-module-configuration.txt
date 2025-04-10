@@ -1,0 +1,19 @@
+#Install global npm packages without sudo and avoid permission issues.
+#1. Create a folder (commonly ~/.npm-global):
+	mkdir ~/.npm-global
+
+#2. Set the NPM Prefix to That Folder
+	npm config set prefix ~/.npm-global
+
+#3. Add the bin Path to Your Shell (for CLI tools to work)
+	nano ~/.zshrc
+	export PATH="$HOME/.npm-global/bin:$PATH"
+	source ~/.zshrc
+
+#Now You Can Install global packages like this without sudo:
+#example: npm install -g sass
+
+# To Undo This Setup:
+# npm config delete prefix
+# Then remove or comment the line from .zshrc:# export PATH="$HOME/.npm-global/bin:$PATH"
+# And then reload source ~/.zshrc
