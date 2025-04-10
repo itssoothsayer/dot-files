@@ -54,3 +54,5 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 bindkey "^[[3;5~" kill-word
+
+export PATH=$HOME/.npm-global/bin:$PATH
